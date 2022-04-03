@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<style>
+
+*{box-sizing: border-box;}
+
+body{
+   font-family: verdana;
+  font-size: 15px;
+  display: block;
+  margin: 0;
+  background: skyblue;
+  }
+
+/*Header*/
+
+.header {
+  position: relative;
+  top: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/*Header Image*/
+.header img {vertical-align: middle;
+height: 100px;}
+
+
+/*Header Content*/
+
+.header .content {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.header h1{text-align: center;
+  font-family:segoe script;
+  font-weight: bold;
+  font-size: 55px;
+  margin-top: -4px;
+  text-shadow: 2px 1px 3px navy;
+}
+.header h4{text-align: right;
+  color: white;
+}
+
+/*Header Logo*/
+
+.logo{background: lightblue;
+  margin: 0;
+  padding: 15px;
+}
+
+.logo img{width: 100%;
+}
+
+
+.sidenav {
+  height: 0%;
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  top: 155px;
+  right: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: hidden;
+  transition: 0.5s;
+border-radius:0px 0px 25px 25px;}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.2s;
+  margin-top: 5px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/*Background Image*/
+
+.mainimage{position: relative;
+  overflow-x: hidden;
+}
+
+.mainimage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/Marcus/Documents/nathan-da-silva-FO7kUmBYVi0-unsplash.jpg");
+  height: auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+
+/*Main Image Content*/
+
+.mainimage .content2{
+  color: white;
+  padding: 10px;
+  text-shadow: 1px 2px 3px black;
+
+}
+.mainimage h1{
+  font-size: 64px; 
+  animation: movedown 2s linear forwards;
+  visibility: hidden;
+  animation-delay: 1s;
+}
+@keyframes movedown{
+  0%{transform: translateY(-100px);
+    visibility: visible;
+  }
+ 100%{transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.mainimage p{font-size: 20px;
+  opacity: 0;
+   animation: slideleft 1s linear forwards;
+   animation-delay: 2s;
+   padding: 15px;
+   float: right;
+}
+@keyframes slideleft{
+  0%{transform: translate(100px);
+    opacity: 0;
+  }
+   100%{transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+
+.mainimage button:hover{opacity: 0.5;
+transition: 2s;}
+
+.mainimage button{width: 150px;
+  background: white;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.mainimage button:hover{opacity: 0.5;
+transition: 2s;}
+
+/*Blue Box*/
+
+.box{background: blue;
+  color: white;
+  height: auto;
+  width: 250px;
+  padding: 5px;
+  border-radius: 15px;
+  position: relative;
+  right: 0;
+ animation: zoomin 2s linear forwards;
+  visibility: hidden;
+  animation-delay: 3s;
+  text-shadow: 0px 0px 0px;
+}
+@keyframes zoomin{
+  0%{transform: scale(0.01);
+    visibility: visible;
+  }
+   100%{transform: scale(1);
+    visibility: visible;
+  }
+}
+.box input{border: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+height: 30px;}
+
+
+/*First Column*/
+
+
+.column1{width: 20%;
+  height: 280px;
+  float: left;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 0px;
+  text-align: center;
+  }
+
+.column1 .point{font-weight: bold ;
+  font-size: 25px;
+  font-family: nirmala ui;
+  text-align: center;
+}
+
+.column1 img{
+  width: 48px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Second Column*/
+
+.column2{width: 24% ;
+  float: left;
+  margin-bottom: 20px;
+  padding: 8px;
+  margin-top: 60px;
+  margin-left: 10px;
+  }
+
+.card{ box-shadow:0px 1px 3px 1px red;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  }
+.card h1{
+  font-size: 25px;
+   text-shadow: 1px 2px 3px black;
+   color: white;
+}
+.card img{;
+  width: 100%;
+  margin-top: 0;
+  border-radius: 15px 15px 0px 0px;
+}
+.cardfooter{margin-top: -22px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 0px 0px 15px 15px;
+  }
+  .cardfooter p{color: white;
+    font-weight: bold;
+  }
+
+.card button{border-radius: 25px;
+  border: solid 1px black;
+  width: 150px;
+  height: 30px;
+}
+.card button:hover{background: darkslategrey;
+  color: white;
+  transition: 2s;
+}
+
+
+/*Third Column*/
+.column3{width: 33% ;
+  margin-bottom: 10px;
+  padding: 15px;
+  margin-top: 30px;
+  margin-left: 0px;
+  text-align: center;
+  float: left;
+  }
+  .column3 img{
+  width: 48px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.column3 .point{font-weight: bold;
+ font-size: 25px;
+  font-family: nirmala ui;
+  text-align: center;}
+
+  
+
+
+/*Footer*/
+
+.footer {
+  background: #003366;
+  height: auto;
+  margin-bottom: 0px;
+}
+
+.footer .content{width: 30% ;
+  padding: 25px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 3.3%;
+  float: left;
+  color: white;
+  }
+
+.footer img{width: 10px;
+}
+
+.footer a{text-decoration: none;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 1115px) {
+  .column2{
+    width: 48%;
+  }
+
+@media screen and (max-width: 1023px) {
+  .column1{
+    width: 40%;
+    justify-content: center;
+    margin-left: 50px;
+  }
+    .column2{width: 45%;
+      padding: px;
+     margin-top: 0px;
+      margin-left: 30px;}
+
+@media screen and (max-width: 617px) {
+  .column1, .column2, .column3{width: 100%;
+    padding: 8px;
+    margin-left: 5px;}
+    .footer .content{display: inline-block;
+      float: none;
+      padding: 2px;
+      font-size: 12px;
+      margin: 15px;
+    }
+   .header h1{font-size: 30px}
+    .mainimage h1{font-size: 50px;}
+
+
+</style>
+ <meta charset="utf-8">
+  <title>https://iretomiwa.github.io/icode--/</title>
+
+</head>
+<body>
+
+<div class="header">
+  <img src="C:\Users\Marcus\Documents\header.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h1>i - CODE < / ></h1>
+   </div>
+</div>
+
+<div class="logo">
+  <img src="iCode-Logo-Black-768x160.png" style="width: 100px;">
+  <span style="font-size:30px;cursor:pointer; float: right; color: navy; " onclick="openNav()">&#9776; 
+  </span>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Search</a>
+  <a href="#">Contact</a>
+   <a href="#">Enrol</a>
+</div>
+  
+
+<div class="mainimage">
+  <img src="">
+  <div class="content2"> 
+    <h1>iCode is the Leader in <br> onsite Computer Science <br> Education
+    </h1>
+
+     <div class="box">Discover an iCode location near you <br>
+        <input type="text" name="search" placeholder="Enter Your City or Zip"> <button style="background: black; color: white; height: 25px; width: 75px;">Search</button>
+
+      </div>
+
+    <p>iCode <strong>computer science programs</strong> offer kids the opportunity <br> to build soft skills and strengthen their academic skills; with <br> program options that suit their <strong>lifestyle</strong> and <strong>schedule</strong></p>
+
+     
+
+      <h4>Comprehensive K-12 programs in computer science</h4>
+      <button>Watch the video</button>
+
+     
+  </div>
+</div>
+
+<hr>
+
+
+  <div class="row">
+
+
+
+<div class="column1">
+  <img src="C:\Users\Marcus\Documents\E Learning_80px.png">
+  <div class="point">Flexible Programs Options
+  </div>
+  <p>Computer science classes that work for different schedules.</p>
+</div>
+
+<div class="column1">
+  <img src="C:\Users\Marcus\Documents\Courses_80px.png">
+  <div class="point">Proprietary Curriculum
+  </div>
+  <p>Dynamic curriculum that meets the demands of a rapidly evolving space</p>
+</div>
+
+<div class="column1">
+  <img src="C:\Users\Marcus\Documents\Library_80px.png">
+  <div class="point">College & Workforce Preparedness
+  </div>
+  <p>Advanced bootcamps to give a great headstart.</p>
+</div>
+
+<div class="column1">
+  <img src="C:\Users\Marcus\Documents\Idea_80px.png">
+  <div class="point">Critical Thinking
+  </div>
+  <p>As they learn skills in coding, we teach kids how to think creatively and solve problems steps-by-steps.</p>
+</div>
+
+<div class="column1">
+  <img src="C:\Users\Marcus\Documents\Shutdown_80px.png">
+  <div class="point">High-Tech Labs
+  </div>
+  <p>State-of-the-art classrooms are fully equipped with the latest technologies, allowing immersive,hands-on experience.</p>
+</div>
+
+
+</div>
+<hr>
+
+ <div><h1 style="text-align: center; font-family: constantia;">Engaging STEAM programs for kids</h1></div>
+
+<div class="row" style="background: white;">
+
+  <div class="column2">
+<div class="card">
+    <img src="C:\Users\Marcus\Documents\images (4).jpeg">
+<div class="cardfooter" style="background: gray;">
+    <h1>Computer Science Paths</h1>
+    <p>A Deep Dive On Specific Topics ....</p>
+  <a href="learnmore.com">
+    <button>Learn More</button></a>
+  </div>
+</div>
+</div>
+
+<div class="column2">
+<div class="card">
+    <img src="C:\Users\Marcus\Documents\images (3).jpeg">
+<div class="cardfooter" style="background: blue;">
+    <h1>Computer Science Anytime</h1>
+    <p>Self-paced Game Development Programs</p>
+  <a href="learnmore.com">
+    <button>Learn More</button></a>
+  </div>
+</div>
+</div>
+
+<div class="column2">
+<div class="card">
+    <img src="C:\Users\Marcus\Documents\images (2).jpeg">
+<div class="cardfooter" style="background: navy;">
+    <h1>Computer Science Camps</h1>
+    <p>Tech Based Skills During The Holiday</p>
+  <a href="learnmore.com">
+    <button>Learn More</button></a>
+  </div>
+</div>
+</div>
+
+<div class="column2">
+<div class="card">
+    <img src="C:\Users\Marcus\Documents\marvin-meyer-SYTO3xs06fU-unsplash.jpg">
+<div class="cardfooter" style="background: white;">
+    <h1 style="text-shadow: 1px 2px 3px white; color: black;">Computer Science Belts</h1>
+    <p style="color: black;">Coding and Design Classes for Kids</p>
+  <a href="learnmore.com">
+    <button>Learn More</button></a>
+  </div>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+<div class="column3">
+  <img src="C:\Users\Marcus\Documents\Under Computer_100px.png">
+  <div class="point">Tech-Oriented World
+  </div>
+  <p>Today, <strong>77% of parent think that coding is one of the most important skills</strong> to learn in our digital age. Moreover, 94% of parents are concerned about the loss of learning and summer slide due to COVID related conditions since last year.</p>
+</div>
+
+
+<div class="column3">
+  <img src="C:\Users\Marcus\Documents\Training_96px.png">
+  <div class="point">Teaching Skills That Matter
+  </div>
+  <p>We apply the <strong>agile</strong> teaching/ learning methodology where students learn and apply skills to <strong>work efficiently in a team</strong> and manage project. This teaches <strong>time management, collaboration and high level thinking</strong> better preparing kids for school and beyond.</p>
+</div>
+
+<div class="column3">
+  <img src="C:\Users\Marcus\Documents\Report Card_96px.png">
+  <div class="point">Kids Do Better When They See Result
+  </div>
+  <p>Being immersed in technology and being allowed to manipulate those technologies, give instant feedback <br> iCode consistently allow that opportunity for kids, making learning exciting, engaging and fun.</p>
+</div>
+</div>
+
+
+
+<div class="footer">
+  <div class="row">
+  <div class="content">
+  <img src="C:\Users\Marcus\Documents\iCode-Logo-Black-768x160.png" style="width: 100px;"> <br>
+  <h6>EMPOWERING FUTURE INNOVATORS</h6>
+    <a href="facebook.com"> <img src="C:\Users\Marcus\Documents\Wondershare\Facebook_96px.png" style="width: 40px;"> </a>
+    <a href="instagram.com"> <img src="C:\Users\Marcus\Documents\Wondershare\Instagram_96px.png" style="width: 40px"> </a>
+    <a href="linkedin.com"> <img src="C:\Users\Marcus\Documents\Wondershare\LinkedIn_96px.png" style="width: 40px">  </a>
+</div>
+
+<div class="content">
+  <h3>iCODE COPORATE</h3>
+    <p>4577, Ohio Dr</p>
+    <p style="margin-top: -10px;">Frisco Tx, 75035</p>
+    <p>469-608-7023</p>
+    <p style="margin-top: -10px;">Info@icodeschool.com</p>
+  </div>
+
+  
+
+  <div class="content">
+  <h3>COMPANY INFO</h3>
+    <ul>
+
+   <li> <a href="home.com">Contact Us</a></li>
+    <li> <a href="home.com">FAQ</a></li>
+     <li> <a href="home.com">Programs</a></li>
+     <li>  <a href="home.com">Location</a></li>
+     </ul>
+   </div>
+
+ </div>
+
+</div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.height = "40%";
+  
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.height = "0%";
+}
+</script>
+   
+</body>
+
+
+
+
+
+</html>
